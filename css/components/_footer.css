@@ -1,0 +1,22 @@
+{% import '../tools/_macros.css' %}
+{% import '../tools/_variables.css' %}
+
+.footer {
+  background-color: {{ footer_bg_color }};
+}
+
+/* Footer content */
+
+.footer p,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer label,
+.footer span,
+.footer li,
+.footer img {
+  color: {{ footer_font_color }};
+}

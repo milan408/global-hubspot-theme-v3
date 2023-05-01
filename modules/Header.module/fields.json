@@ -1,0 +1,166 @@
+[ {
+  "id" : "e8fc2b51-5c19-4666-38d0-8103db13e09c",
+  "name" : "logo_setting",
+  "display_width" : null,
+  "label" : "Logo Setting",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "4f50b4f6-7403-56fb-594d-33c4906f5fdb",
+    "name" : "logo_image",
+    "display_width" : null,
+    "label" : "Logo Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://5368814.fs1.hubspotusercontent-na1.net/hubfs/5368814/Socoal%20Democrats.png",
+      "alt" : "Socoal Democrats",
+      "loading" : "lazy",
+      "width" : 227,
+      "height" : 78,
+      "max_width" : 227,
+      "max_height" : 78
+    }
+  }, {
+    "id" : "1d70301d-bf23-bc13-20f5-0c9bd5ee29ed",
+    "name" : "logo_link",
+    "display_width" : null,
+    "label" : "Logo Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "javascript:void(0)",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://5368814.fs1.hubspotusercontent-na1.net/hubfs/5368814/Socoal%20Democrats.png",
+      "alt" : "Socoal Democrats",
+      "loading" : "lazy",
+      "width" : 227,
+      "height" : 78,
+      "max_width" : 227,
+      "max_height" : 78
+    },
+    "logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "javascript:void(0)",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "86409c77-e874-8348-e616-34b5543fe9ff",
+  "name" : "header_menu",
+  "display_width" : null,
+  "label" : "Header Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 113260642608
+}, {
+  "id" : "58748427-6f84-acc1-d332-769cb8f6ea5b",
+  "name" : "button_setting",
+  "display_width" : null,
+  "label" : "Button Setting",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : 2,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "d91116a3-571f-9f4e-b837-8c49f1410a8e",
+    "name" : "button_design_version",
+    "display_width" : null,
+    "label" : "Button Design Version",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "v1", "Version 1" ], [ "v2", "Version 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "69ddde2c-1f69-1709-bdf4-441ca15babf0",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Get Involved"
+  }, {
+    "id" : "fe632785-99a7-07a1-6b28-01df24aff856",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "javascript:void(0)",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text_field" : "Get Involved",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "javascript:void(0)",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "text_field" : "Get Involved",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "javascript:void(0)",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+} ]

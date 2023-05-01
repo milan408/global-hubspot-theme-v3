@@ -1,0 +1,43 @@
+{% import '../tools/_macros.css' %}
+{% import '../tools/_variables.css' %}
+
+{% set table_head_bg_color = color(theme.tables.header.background.color) %}
+{% set table_head_font_color = theme.tables.header.text.color.color %}
+
+{% set table_bg_color = color(theme.tables.table_body.background.color) %}
+{% set table_font_color = theme.tables.table_body.text.color.color %}
+
+{% set table_footer_bg_color = color(theme.tables.footer.background.color) %}
+{% set table_footer_font_color = theme.tables.footer.text.color.color %}
+
+{% set table_cell_spacing = theme.tables.cells.spacing.spacing.css %}
+{% set table_border = theme.tables.cells.border.border.css %}
+
+
+table {
+  {{ table_border }}
+  background-color: {{ table_bg_color }};
+}
+
+/* Table cells */
+
+td,
+th {
+  {{ table_border }}
+  {{ table_cell_spacing }}
+  color: {{ table_font_color }};
+}
+
+/* Table header */
+
+thead th {
+  background-color: {{ table_head_bg_color }};
+  color: {{ table_head_font_color }};
+}
+
+/* Table footer */
+
+tfoot td {
+  background-color: {{ table_footer_bg_color }};
+  color: {{ table_footer_font_color }};
+}

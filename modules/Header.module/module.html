@@ -1,0 +1,53 @@
+<header>
+  <div class="content-wrapper">
+    <div class="header_row d_flex align_center justify_space_between"> 
+      {# Begin: Logo #}
+      {% if module.logo_setting.logo_image.src %} 
+      <div class="header_logo"> 
+        {% set href = module.logo_setting.logo_link.url.href %}
+        {% if module.logo_setting.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if module.logo_setting.logo_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.logo_setting.logo_link.rel %}rel="{{ module.logo_setting.logo_link.rel }}"{% endif %}
+           > 
+          {% set loadingAttr = module.logo_setting.logo_image.loading != 'disabled' ? 'loading="{{ module.logo_setting.logo_image.loading }}"' : '' %}
+          <img src="{{ module.logo_setting.logo_image.src }}" alt="{{ module.logo_setting.logo_image.alt }}" {{ loadingAttr }}> 
+        </a>
+      </div>
+      {% endif %}
+      {# End: Logo #}
+
+      <div class="header_nav_part d_flex justify_end align_center">
+        {# Begin: Header Menu #}
+        {% if module.header_menu %}
+        <div class="header_menu">
+          {% menu id="{{ module.header_menu }}" %}
+        </div>
+        {% endif %}
+        {# End: Header Menu #}
+  
+        {# Begin: Header CTAs #} 
+        {% if module.button_setting|length %}
+        <div class="header_ctas d_flex"> 
+          {% for item in module.button_setting %}  
+          {% set href = item.link_field.url.href %}
+          {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}" class="button {{ item.button_design_version }}"
+             {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+             >
+            {{ item.text_field }}
+          </a>
+          {% endfor %}
+        </div> 
+        {% endif %}
+        {# End: Header CTAs #}
+      </div> 
+
+    </div>
+  </div>
+</header>

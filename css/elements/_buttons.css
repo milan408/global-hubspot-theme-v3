@@ -1,0 +1,114 @@
+{% import '../tools/_macros.css' %}
+{% import '../tools/_variables.css' %}
+
+
+{# Begin: Button Version 1 #}
+{% set button_v1_font = theme.buttons.button_v1.text.font %}
+{% set button_v1_text_transform = theme.buttons.button_v1.text.transform %}
+{% set button_v1_bg_color = color(theme.buttons.button_v1.background.color) %}
+{% set button_v1_border = theme.buttons.button_v1.border.border %} 
+{% set button_v1_top_left_corner_radius = theme.buttons.button_v1.corner.top_left_radius ~ 'px' %} 
+{% set button_v1_top_right_corner_radius = theme.buttons.button_v1.corner.top_right_radius ~ 'px' %}
+{% set button_v1_bottom_right_corner_radius = theme.buttons.button_v1.corner.bottom_right_radius ~ 'px' %}
+{% set button_v1_bottom_left_corner_radius = theme.buttons.button_v1.corner.bottom_left_radius ~ 'px' %}
+{% set button_v1_spacing = theme.buttons.button_v1.spacing.spacing.css %}
+{% set button_v1_bg_color =  theme.buttons.button_v1.background.color.color %}
+{% set button_v1_bg_opacity =  theme.buttons.button_v1.background.color.opacity %} 
+{% set button_v1_color_hover = color(theme.buttons.button_v1.hover.text.color) %} 
+{% set button_v1_background_hover = color(theme.buttons.button_v1.hover.background.color) %}
+{% set button_v1_border_hover = theme.buttons.button_v1.hover.border.border.css %}
+{% set button_v1_top_left_corner_radius_hover = theme.buttons.button_v1.hover.corner.top_left_radius ~ 'px' %} 
+{% set button_v1_top_right_corner_radius_hover = theme.buttons.button_v1.hover.corner.top_right_radius ~ 'px' %}
+{% set button_v1_bottom_right_corner_radius_hover = theme.buttons.button_v1.hover.corner.bottom_right_radius ~ 'px' %}
+{% set button_v1_bottom_left_corner_radius_hover = theme.buttons.button_v1.hover.corner.bottom_left_radius ~ 'px' %}
+
+
+button,
+.button,
+.hs-button,
+.hs-blog-post-listing__post-button {
+  {{ button_v1_border.css }}
+  {{ button_v1_spacing }}
+  {{ button_v1_font.style }};
+  background-color: {{ button_v1_bg_color }};
+  border-radius: {{ button_v1_top_left_corner_radius }} {{ button_v1_top_right_corner_radius }} {{ button_v1_bottom_right_corner_radius }} {{ button_v1_bottom_left_corner_radius }};
+  color: {{ button_v1_font.color }};
+  font-size: {{ button_v1_font.size ~ button_v1_font.size_unit }};
+  text-transform: {{ button_v1_text_transform }};
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.hs-button:hover,
+.hs-button:focus,
+.hs-blog-post-listing__post-button:hover,
+.hs-blog-post-listing__post-button:focus {
+  {{ button_v1_border_hover }};
+  color: {{ button_v1_color_hover }};
+  background-color: {{ button_v1_background_hover }};
+  border-radius: {{ button_v1_top_left_corner_radius_hover }} {{ button_v1_top_right_corner_radius_hover }} {{ button_v1_bottom_right_corner_radius_hover }} {{ button_v1_bottom_left_corner_radius_hover }};
+}
+
+button:active,
+.button:active,
+.hs-button:active,
+.hs-blog-post-listing__post-button:active {
+  {{ button_v1_font.style }};
+  background-color: rgba({{ color_variant(button_v1_bg_color, 40)|convert_rgb }}, {{ button_v1_bg_opacity / 100 }});
+  border-color: {{ color_variant(button_v1_border.top.color, 40) }};
+}
+{# End: Button Version 1 #}
+
+
+
+{# Begin: Button Version 2 #}
+{% set button_v2_font = theme.buttons.button_v2.text.font %} 
+{% set button_v2_text_transform = theme.buttons.button_v2.text.transform %}
+{% set button_v2_bg_color = color(theme.buttons.button_v2.background.color) %}
+{% set button_v2_border = theme.buttons.button_v2.border.border %} 
+{% set button_v2_top_left_corner_radius = theme.buttons.button_v2.corner.top_left_radius ~ 'px' %} 
+{% set button_v2_top_right_corner_radius = theme.buttons.button_v2.corner.top_right_radius ~ 'px' %}
+{% set button_v2_bottom_right_corner_radius = theme.buttons.button_v2.corner.bottom_right_radius ~ 'px' %}
+{% set button_v2_bottom_left_corner_radius = theme.buttons.button_v2.corner.bottom_left_radius ~ 'px' %}
+{% set button_v2_spacing = theme.buttons.button_v2.spacing.spacing.css %}
+{% set button_v2_bg_color =  theme.buttons.button_v2.background.color.color %}
+{% set button_v2_bg_opacity =  theme.buttons.button_v2.background.color.opacity %} 
+{% set button_v2_color_hover = color(theme.buttons.button_v2.hover.text.color) %} 
+{% set button_v2_background_hover = color(theme.buttons.button_v2.hover.background.color) %}
+{% set button_v2_border_hover = theme.buttons.button_v2.hover.border.border.css %}
+{% set button_v2_top_left_corner_radius_hover = theme.buttons.button_v2.hover.corner.top_left_radius ~ 'px' %} 
+{% set button_v2_top_right_corner_radius_hover = theme.buttons.button_v2.hover.corner.top_right_radius ~ 'px' %}
+{% set button_v2_bottom_right_corner_radius_hover = theme.buttons.button_v2.hover.corner.bottom_right_radius ~ 'px' %}
+{% set button_v2_bottom_left_corner_radius_hover = theme.buttons.button_v2.hover.corner.bottom_left_radius ~ 'px' %}
+
+button.v2,
+.button.v2 {
+  {{ button_v2_border.css }}
+  {{ button_v2_spacing }}
+  {{ button_v2_font.style }};
+  background-color: {{ button_v2_bg_color }};
+  border-radius: {{ button_v2_top_left_corner_radius }} {{ button_v2_top_right_corner_radius }} {{ button_v2_bottom_right_corner_radius }} {{ button_v2_bottom_left_corner_radius }};
+  color: {{ button_v2_font.color }};
+  font-size: {{ button_v2_font.size ~ button_v2_font.size_unit }};
+  text-transform: {{ button_v2_text_transform }};
+}
+
+button.v2:hover,
+button.v2:focus,
+.button.v2:hover,
+.button.v2:focus{
+  {{ button_v2_border_hover }};
+  color: {{ button_v2_color_hover }};
+  background-color: {{ button_v2_background_hover }};
+  border-radius: {{ button_v2_top_left_corner_radius_hover }} {{ button_v2_top_right_corner_radius_hover }} {{ button_v2_bottom_right_corner_radius_hover }} {{ button_v2_bottom_left_corner_radius_hover }};
+}
+
+button.v2:active,
+.button.v2:active{
+  {{ button_v2_font.style }};
+  background-color: rgba({{ color_variant(button_v2_bg_color, 40)|convert_rgb }}, {{ button_v2_bg_opacity / 100 }});
+  border-color: {{ color_variant(button_v2_border.top.color, 40) }};
+}
+{# End: Button Version 2 #}

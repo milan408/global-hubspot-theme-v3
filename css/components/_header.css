@@ -1,0 +1,40 @@
+{% import '../tools/_macros.css' %}
+{% import '../tools/_variables.css' %}
+ 
+
+/*********** Header Variables ************/
+{% set nav_font_color = theme.header.menu.text.color.color %}
+{% set nav_drop_down_font_color = theme.header.menu.drop_downs.text.color.color %}
+{% set nav_drop_down_bg_color = color(theme.header.menu.drop_downs.background.color) %}
+{% set nav_drop_down_border = theme.header.menu.drop_downs.border.border.css %}
+{% set header_bg_color = color(theme.header.background.color) %}
+
+{###########################   Website header   #########################} 
+
+header {
+  background-color: {{ header_bg_color }};
+}
+
+header .header_logo{ 
+  width: 150px;
+}
+
+header .header_nav_part{
+  width: calc( 100% - 180px );
+}
+
+header .header_menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header .header_menu ul li + li{
+  margin-left: 18px; 
+}
+
+header .header_menu ul li a{
+  color: {{ primary_color }};
+  font-weight: 700;
+}

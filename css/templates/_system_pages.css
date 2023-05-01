@@ -1,0 +1,7 @@
+{% import '../tools/_macros.css' %}
+{% import '../tools/_variables.css' %}
+
+.hs-search-results__title {
+  {{ h1_font.style }};
+  color: {{ h1_font.color }};
+}
